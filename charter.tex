@@ -1,46 +1,46 @@
 \documentclass[
 11pt, % The default document font size, options: 10pt, 11pt, 12pt
-codirector, % Uncomment to add a codirector to the title page
+%codirector, % Uncomment to add a codirector to the title page
 ]{charter} 
 
 
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Título del proyecto} 
+\titulo{Desarrollo de un dispositivo embebido localizador y botón antipánico} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
-\posgrado{Carrera de Especialización en Sistemas Embebidos} 
-%\posgrado{Carrera de Especialización en Internet de las Cosas} 
+% \posgrado{Carrera de Especialización en Sistemas Embebidos} 
+\posgrado{Carrera de Especialización en Internet de las Cosas} 
 %\posgrado{Carrera de Especialización en Intelegencia Artificial}
 %\posgrado{Maestría en Sistemas Embebidos} 
 %\posgrado{Maestría en Internet de las cosas}
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
-\autor{Nombre del Autor} 
+\autor{Erik Hromek} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Nombre del Director}
-\pertenenciaDirector{pertenencia} 
+\director{Por definir}
+\pertenenciaDirector{Por definir} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
-\codirector{John Doe} % para que aparezca en la portada se debe descomentar la opción codirector en el documentclass
-\pertenenciaCoDirector{FIUBA}
+%\codirector{Por definir} % para que aparezca en la portada se debe descomentar la opción codirector en el documentclass
+%\pertenenciaCoDirector{Por definir}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Nombre del cliente}
-\empresaCliente{Empresa del cliente}
+\cliente{???}
+\empresaCliente{???}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
-\juradoUno{Nombre y Apellido (1)}
-\pertenenciaJurUno{pertenencia (1)} 
-\juradoDos{Nombre y Apellido (2)}
-\pertenenciaJurDos{pertenencia (2)}
-\juradoTres{Nombre y Apellido (3)}
-\pertenenciaJurTres{pertenencia (3)}
+%\juradoUno{Nombre y Apellido (1)}
+%\pertenenciaJurUno{pertenencia (1)} 
+%\juradoDos{Nombre y Apellido (2)}
+%\pertenenciaJurDos{pertenencia (2)}
+%\juradoTres{Nombre y Apellido (3)}
+%\pertenenciaJurTres{pertenencia (3)}
  
-\fechaINICIO{30 de abril de 2021}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{18 de junio de 2021} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{15 de mayo de 2022}	%Fecha de defensa pública del trabajo final
+\fechaINICIO{20 de junio de 2023}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlan{8 de julio de 2023} 	%Fecha de final de cursada de GdP
+\fechaFINALTrabajo{???}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -69,7 +69,7 @@ codirector, % Uncomment to add a codirector to the title page
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
-%1      & Se completa hasta el punto 4 inclusive                 & dd/mm/aaaa \\ \hline
+      & Se completa hasta el punto 4 inclusive                 & dd/mm/aaaa \\ \hline
 %2      & Se completa hasta el punto 7 inclusive
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
@@ -92,7 +92,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en \textcolor{red}{la implementación de un prototipo de un sistema de control de temperatura de un calefón}, y tendrá un presupuesto preliminar estimado de \textcolor{red}{600} h de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un prototipo de un botón antipánico y localizador, y tendrá un presupuesto preliminar estimado de \textcolor{red}{600} h de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -116,51 +116,51 @@ Se adjunta a esta acta la planificación inicial.
 \label{sec:descripcion}
 
 
-\begin{consigna}{red} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección. En cada entrega parcial deben eliminar los comandos begin y end del bloque consigna de las secciones que hayan completado.
+El proyecto consiste, en primer lugar, en la investigación y el desarrollo de un prototipo de un dispositivo localizador que funcione como botón antipánico. En segundo lugar, incluye la implementación de una prueba de concepto de una aplicación web que permita recepcionar y registrar las activaciones del botón antipánico.
 
-El objetivo es que el lector en una o dos páginas entienda de qué trata el proyecto y cuáles son sus desafíos, cuál es la motivación para realizarlo y su importancia.
-
-Se debe introducir el contexto del proyecto, el estado del arte en la temática, describir la propuesta de valor, cúal es el problema que atiende y cuál es la solución que se propone. Se debe dar una descripción funcional de la solución que incluya un diagrama en bloques.
-
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
-
+Resulta importante realizar una introducción al contexto en el cual se desarrolla este proyecto. Esto permitirá entender los motivos originales del autor, desafíos técnicos del proyecto y las consideraciones/restricciones de este.
+El autor tiene experiencia en la adquisición, configuración, implementación y soporte de botones antipánico disponibles en el mercado. Se observa que los dispositivos disponibles en el mercado presentan los siguientes inconvenientes:
 \begin{itemize}
-	\item ¿Cuál es el contexto del proyecto, es un emprendimiento personal, un proyecto para una empresa, es parte del programa de vinculación con empresas del posgrado?
-	\item ¿Existen o aplican condiciones especiales al proyecto, financiamiento de algún programa público o privado, acuerdos de confidencialidad, acuerdos sobre la propiedad intelectual de los entregables u otros?
-	\item ¿Cómo se compara la solución propuesta con el estado del arte en el campo de aplicación? ¿En qué aspectos destaca?
-	\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-	\item ¿En qué estado del ciclo de vida está la solución que se propone?
-	\item ¿Cuáles son las características del cliente (el adoptante de los entregables del proyecto) qué valora, qué necesita?
-	\item ¿Por dónde pasa la innovación?
+	\item Especificaciones de hardware obsoletas.
+	\item Documentación escasa, desactualizada o incluso incorrecta en algunos casos.
+	\item Poca fiabilidad de dispositivo (dificultad para configurarlos, mala señal, desconfianza al momento de utilizarlo. 
+	\item Inconsistencias entre dispositivos idénticos.
+	\item Poca duración de batería (desde aproximadamente 24 horas hasta 3 o 4 días como máximo, cuando lo deseable para el beneficiario final del botón es de al menos 5 o 6 días).
+	\item Precio exageradamente elevado, y muchas dificultades para adquirirlos mediante proveedores.
+	\item Nulas características de seguridad.
 \end{itemize}
 
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema} y descripción funcional de la solución propuesta.
+Se ha investigado y revisado diferentes alternativas en el mercado, así como también se ha trabajó con dispositivos utilizados por sistemas de la competencia llegando a conclusiones similares: no se encuentran dispositivos aceptables cuyo costo sea accesible o. Entonces, uno de los principales motivos del proyecto es lograr construir un dispositivo que permita validar las elecciones tecnológicas y tener una fiabilidad superadora, en comparación a los dispositivos disponibles en el mercado.
 
-Las figuras se deben mencionar en el texto ANTES de que aparezcan con una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''.  La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+Descrito el contexto en el cual se encuentra el proyecto a desarrollar, es de interés realizar una breve introducción de los componentes a desarrollador. En la figura 1 se observan los componentes con los que contará minimamente el prototipo a construir:
+\begin{itemize}
+	\item Microcontrolador: para permitir el desarrollo del sistema embebido.
+	\item Módulo de telefonía móvil: para permitir conectividad y comunicación mediante SMS y redes IP.
+	\item Batería: para el uso del dispositivo de forma autónoma.
+	\item Módulo GNSS (Global Navigation Satellite System): para obtener la ubicación geográfica del usuario del botón.
+	\item Almacenamiento: para permitir el guardado de la configuración y parámetros del dispositivo.
+	\item Activador: actuador físico para disparar una alerta y notificar al sistema web.
+\end{itemize}
+
+Adicionalmente, se encuentran algunos componentes web a incorporar en el marco del proyecto:
+
+\begin{itemize}
+	\item API receptora de SMS: para permitir la recepción de mensajes del texto del dispositivo y enviarlos a otro sistema.
+	\item Aplicación web de seguimiento: esta aplicación compuesta por un \textit{backend} y un \textit{frontend} para registrar y almacenar las alertas.
+	\item Base de datos: para funcionar como almacenamiento persistente de la aplicación web anterior.
+\end{itemize}
+
+Estos componentes se utilizarán a modo de prueba de concepto para probar el correcto funcionamiento del prototipo de botón y funcionar como caso de uso para integrar este dispositivo a cualquier plataforma web de similares características.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.5\textwidth]{./Figuras/diagBloques.png}
-\caption{Diagrama en bloques del sistema}
+\includegraphics[width=1\textwidth]{./Figuras/diagBloques.png}
+\caption{Diagrama en bloques del dispositivo y los componentes web a desarrollar}
 \label{fig:diagBloques}
 \end{figure}
 
-\vspace{25px}
-
-El tamaño de la tipografía en TODAS las figuras debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama, preferentemente en la gama de colores pastel.
-\end{consigna}
-
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
-
-\begin{consigna}{red} % este comando se debe borrar para la entrega, junto con la contraparte \end{consigna}{red} 
- 
-\textbf{Nota importante:} borrar esto y todas las consignas en color rojo antes de entregar este documento). Esto se hace eliminando el par de comandos que forman el bloque consigna, \verb!\begin{consigna}{red}! y \verb!\end{consigna}{red}! del código. 
- 
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos. Si se considera que una persona cumple dos o más roles, entonces solo dejarla en el rol más importante. 
-
-Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente. Si una persona es el Responsable, no debe ser colocado también como miembro del equipo.
-
 
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
@@ -169,75 +169,51 @@ Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director Trabajo final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
-Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+Usuario Final    & Ciudadano & - 	& - \\ \hline
 \end{tabularx}
 \end{table}
 
-El Director suele ser uno de los Orientadores.
 
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
-
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
-
-Es deseable listar a continuación las principales características de cada interesado.
- 
-Por ejemplo:
 \begin{itemize}
-	\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-	\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-	\item Orientador: María Gómez va a poder ayudar mucho con la definición de los requerimientos.
+	\item Responsable: principal interesado en la implementación exitosa del dispositivo, posee interés en continuar con el trabajo en futuras etapas
+	\item Orientador: por definir
 \end{itemize}
-
-\end{consigna} % este comando se debe borrar para la entrega, junto con la contraparte \begin{consigna}{red}
-
 
 
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red}
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
-
-Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
-\end{consigna}
+El propósito de este proyecto es validar la idea de que es posible implementar, al menos de forma inicial, dispositivo que funcione como botón antipánico y localizador que permita notificar la ubicación del usuario final al momento de ser activado via SMS o web y que funcione mediante una batería de forma autónoma.
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
+Para la realización de este proyecto se llevará a cabo en primer lugar una investigación preliminar en relación a los componentes de hardware y software a utilizar, la implementación del hardware del botón antipánico en segundo lugar, en tercer lugar el desarrollo del firmware o software para controlar el dispositivo y en último lugar el desarrollo de una plataforma web para recepcionar las activaciones del botón antipánico.
 
-Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
+La implementación del dispositivo incluirá la conectividad a redes móviles para tener conectividad, el uso de un módulo de los sistemas globales de navegación por satélite para tomar la ubicación actual de la persona, un mecanismo de configuración/parametrización del dispositivo que sea persistente:  mediante una tarjeta de almacenamiento local o mediante la memoria persistente de un microcontrolador (en el caso de que lo posea). Además, contará con alimentación mediante una batería de prestaciones acordes al tamaño del dispositivo y se realizará una investigación acerca del consumo energético de este.
+El desarrollo de la plataforma web incluirá la implementación de un servicio online que permita recepcionar mensajes de texto desde teléfonos de Argentina, el registro y visualización de las alertas, a modo de prueba de concepto.
 
-Explicitar todo lo quede comprendido dentro del alcance del proyecto.
-
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
-
-\end{consigna}
-
+Este proyecto no incluirá:
+\begin{itemize}
+	\item Aplicación web productiva para gestionar las activaciones del botón antipánico; por productiva se refiere a que pueda ser ofrecida al mercado o utilizable por usuarios encargados del monitoreo.
+	\item Desarrollo de un dispositivo listo para ser lanzado al mercado, es decir que no sea un prototipo.
+	\item Desarrollo de un contenedor para el dispositivo.
+\end{itemize}
 
 \section{5. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red}
-``Para el desarrollo del presente proyecto se supone que: ...''
-
 \begin{itemize}
-	\item Supuesto 1
-	\item Supuesto 2...
-\end{itemize}
+	\item Todos los componentes de hardware a utilizar están pendientes de definir posterior a una investigación inicial
+	\item Se intentará utilizar parte del material aprendido durante el curso de especialización relacionado a la programación de sistemas embebidos (bibliotecas, firmware, etc.)
+	\item Se utilizará una microcontrolador que pueda ser adquirido a un costo relativamente bajo
+	\item Se contará con un chip de telefonía móvil para utilizar en el proyecto
+	\item Se adquirirán un módulo de localización satelital, una batería compatible, un módulo de telefonía móvil y un pulsador que estén disponibles en el mercado local
+	\item Para recepcionar los SMS, se contratará un servicio web que permita recibir los mensajes y redireccionarlos a la aplicación web
 
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
-\end{consigna}
+\end{itemize}
 
 \section{6. Requerimientos}
 \label{sec:requerimientos}
