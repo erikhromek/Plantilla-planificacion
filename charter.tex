@@ -17,7 +17,7 @@
 %\posgrado{Maestría en Internet de las cosas}
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
-\autor{Erik Hromek} 
+\autor{Ing. Erik Hromek} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{Mg. Ing. Lucas Dórdolo}
@@ -69,7 +69,10 @@
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
-      & Se completa hasta el punto 4 inclusive                 & dd/mm/aaaa \\ \hline
+1      & Se completa hasta el punto 5 inclusive                 & 04/07/2023 \\ \hline
+2          & Se aplican correcciones hasta el punto 5 inclusive                  & 9/07/2023 \\ \hline
+3          & Se completa hasta el punto 9 inclusive                 & 10/07/2023 \\ \hline
+
 %2      & Se completa hasta el punto 7 inclusive
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
@@ -92,7 +95,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un prototipo de un botón antipánico y localizador, y tendrá un presupuesto preliminar estimado de \textcolor{red}{600} h de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un prototipo de un botón antipánico y localizador, y tendrá un presupuesto preliminar estimado de \textcolor{red}{600} h de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -116,46 +119,47 @@ Se adjunta a esta acta la planificación inicial.
 \label{sec:descripcion}
 
 
-El proyecto consiste, en primer lugar, en la investigación y el desarrollo de un prototipo de un dispositivo localizador que funcione como botón antipánico. En segundo lugar, incluye la implementación de una prueba de concepto de una aplicación web que permita recepcionar y registrar las activaciones del botón antipánico.
+El proyecto consiste, en primer lugar, en la investigación y el desarrollo de un prototipo de un dispositivo localizador que funcione como botón antipánico. En segundo lugar, incluye la implementación de una prueba de concepto de una aplicación web que permita recibir y registrar las activaciones del botón antipánico.
 
 Resulta importante realizar una introducción al contexto en el cual se desarrolla este proyecto. Esto permitirá entender los motivos originales del autor, desafíos técnicos del proyecto y las consideraciones/restricciones de este.
-El autor tiene experiencia en la adquisición, configuración, implementación y soporte de botones antipánico disponibles en el mercado. Se observa que los dispositivos disponibles en el mercado presentan los siguientes inconvenientes:
+El autor tiene experiencia en la adquisición, configuración, implementación y soporte de botones antipánico disponibles en el mercado. Se observa que varios de estos presentan los siguientes inconvenientes:
 \begin{itemize}
 	\item Especificaciones de hardware obsoletas.
 	\item Documentación escasa, desactualizada o incluso incorrecta en algunos casos.
-	\item Poca fiabilidad de dispositivo (dificultad para configurarlos, mala señal, desconfianza al momento de utilizarlo. 
+	\item Poca fiabilidad de dispositivo (dificultad para configurarlos, mala señal, desconfianza al momento de utilizarlo).
 	\item Inconsistencias entre dispositivos idénticos.
 	\item Poca duración de batería (desde aproximadamente 24 horas hasta 3 o 4 días como máximo, cuando lo deseable para el beneficiario final del botón es de al menos 5 o 6 días).
-	\item Precio exageradamente elevado, y muchas dificultades para adquirirlos mediante proveedores.
+	\item Precio exageradamente elevado y muchas dificultades para adquirirlos mediante proveedores.
 	\item Nulas características de seguridad.
 \end{itemize}
 
-Se ha investigado y revisado diferentes alternativas en el mercado, así como también se ha trabajó con dispositivos utilizados por sistemas de la competencia llegando a conclusiones similares: no se encuentran dispositivos aceptables cuyo costo sea accesible o. Entonces, uno de los principales motivos del proyecto es lograr construir un dispositivo que permita validar las elecciones tecnológicas y tener una fiabilidad superadora, en comparación a los dispositivos disponibles en el mercado.
+Se ha investigado y revisado diferentes alternativas en el mercado, así como también se ha trabajado con dispositivos utilizados por sistemas de la competencia llegando a conclusiones similares: no se encuentran dispositivos aceptables cuyo costo sea accesible. 
+Por ello, uno de los principales motivos del proyecto es lograr construir un dispositivo que permita validar las elecciones tecnológicas y tener una fiabilidad superior, en comparación con los dispositivos disponibles en el mercado.
 
-Descrito el contexto en el cual se encuentra el proyecto a desarrollar, es de interés realizar una breve introducción de los componentes a desarrollador. En la figura 1 se observan los componentes con los que contará minimamente el prototipo a construir:
+Descrito el contexto en el cual se encuentra el proyecto a desarrollar, es de interés realizar una breve introducción de los componentes involucrados. En la figura 1 se observan los componentes con los que contará, como mínimo, el prototipo a construir:
 \begin{itemize}
-	\item Microcontrolador: para permitir el desarrollo del sistema embebido.
-	\item Módulo de telefonía móvil: para permitir conectividad y comunicación mediante SMS y redes IP.
-	\item Batería: para el uso del dispositivo de forma autónoma.
-	\item Módulo GNSS (Global Navigation Satellite System): para obtener la ubicación geográfica del usuario del botón.
-	\item Almacenamiento: para permitir el guardado de la configuración y parámetros del dispositivo.
-	\item Activador: actuador físico para disparar una alerta y notificar al sistema web.
+	\item Microcontrolador: permitirá el desarrollo del sistema embebido.
+	\item Módulo de telefonía móvil: permitirá conectividad y comunicación mediante SMS y redes IP.
+	\item Batería: servirá para el uso del dispositivo de forma autónoma.
+	\item Módulo GNSS (\textit{Global Navigation Satellite System}): obtendrá la ubicación geográfica del usuario del botón.
+	\item Almacenamiento: permitirá el guardado de la configuración y parámetros del dispositivo.
+	\item Activador: actuador físico que disparará una alerta y notificar al sistema web.
 \end{itemize}
 
 Adicionalmente, se encuentran algunos componentes web a incorporar en el marco del proyecto:
 
 \begin{itemize}
-	\item API receptora de SMS: para permitir la recepción de mensajes del texto del dispositivo y enviarlos a otro sistema.
-	\item Aplicación web de seguimiento: esta aplicación compuesta por un \textit{backend} y un \textit{frontend} para registrar y almacenar las alertas.
-	\item Base de datos: para funcionar como almacenamiento persistente de la aplicación web anterior.
+	\item API receptora de SMS: permitirá la recepción de mensajes del texto del dispositivo y enviarlos a otro sistema.
+	\item Aplicación web de seguimiento: aplicación compuesta por un \textit{backend} y un \textit{frontend} que posibilitará registrar y almacenar las alertas.
+	\item Base de datos: funcionará como almacenamiento persistente de la aplicación web anterior.
 \end{itemize}
 
-Estos componentes se utilizarán a modo de prueba de concepto para probar el correcto funcionamiento del prototipo de botón y funcionar como caso de uso para integrar este dispositivo a cualquier plataforma web de similares características.
+Estos componentes se utilizarán a modo de prueba de concepto para probar el correcto funcionamiento del prototipo de botón. También funcionarán como caso de uso para integrar este dispositivo a cualquier plataforma web de similares características.
 
 \begin{figure}[htpb]
 \centering 
 \includegraphics[width=1\textwidth]{./Figuras/diagBloques.png}
-\caption{Diagrama en bloques del dispositivo y los componentes web a desarrollar}
+\caption{Diagrama en bloques del dispositivo y los componentes web a desarrollar.}
 \label{fig:diagBloques}
 \end{figure}
 
@@ -177,27 +181,41 @@ Usuario Final    & Ciudadano & - 	& - \\ \hline
 
 
 \begin{itemize}
-	\item Responsable: principal interesado en la implementación exitosa del dispositivo, posee interés en continuar con el trabajo en futuras etapas
-	\item Orientador: por definir
+	\item Responsable: principal interesado en la implementación exitosa del dispositivo, posee interés en continuar con el trabajo en futuras etapas.
+	\item Orientador: el directo posee experiencia dirigiendo aplicaciones con características similares, pero no posee una gran disponibilidad para colaborar; debe acudirse a él solamente con cuestiones muy focalizadas
 \end{itemize}
 
 
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-El propósito de este proyecto es validar la idea de que es posible implementar, al menos de forma inicial, dispositivo que funcione como botón antipánico y localizador que permita notificar la ubicación del usuario final al momento de ser activado via SMS o web y que funcione mediante una batería de forma autónoma.
+El propósito de este proyecto es validar la idea de que es posible implementar, al menos de forma inicial, un dispositivo que funcione como botón antipánico y localizador. Se busca lograr que este dispositivo permita notificar la ubicación del usuario final al momento de ser activado via SMS o web y que además trabaje de forma autónoma con una batería.
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-Para la realización de este proyecto se llevará a cabo en primer lugar una investigación preliminar en relación a los componentes a utilizar, la implementación del hardware del botón antipánico en segundo lugar, en tercer lugar el desarrollo del firmware o software para controlar el dispositivo y en último lugar el desarrollo de una plataforma web para recepcionar las activaciones del botón antipánico.
+Para la realización de este proyecto se llevará a cabo:
+\begin{itemize}
+	\item una investigación preliminar en relación a los componentes a utilizar,
+	\item la implementación del hardware del botón antipánico,
+	\item el desarrollo del firmware o software para controlar el dispositivo y
+	\item el desarrollo de una plataforma web para recibir las activaciones del botón antipánico.
+\end{itemize}
 
-La implementación del dispositivo incluirá conectividad a redes móviles, el uso de un módulo de posicionamiento satelital para tomar la ubicación actual de la persona y un mecanismo de configuración/parametrización del dispositivo que sea persistente: mediante una tarjeta de almacenamiento local o mediante la memoria persistente de un microcontrolador (en el caso de que lo posea). Además, contará con alimentación mediante una batería de prestaciones acordes al tamaño del dispositivo y se realizará una investigación acerca del consumo energético de este.
+
+La implementación del dispositivo incluirá:
+\begin{itemize}
+	\item conectividad mediante redes móviles,
+	\item el uso de un módulo de posicionamiento satelital para tomar la ubicación actual de la persona y
+	\item un mecanismo de configuración/parametrización del dispositivo que sea persistente.
+\end{itemize}
+Además, contará con alimentación mediante una batería de prestaciones acordes al tamaño del dispositivo y se realizará una investigación acerca del consumo energético de este.
+
 El desarrollo de la plataforma web incluirá la implementación de un servicio online que permita recepcionar mensajes de texto desde teléfonos de Argentina, el registro y visualización de las alertas, a modo de prueba de concepto.
 
 Este proyecto no incluirá:
 \begin{itemize}
-	\item Aplicación web productiva para gestionar las activaciones del botón antipánico; por productiva se refiere a que pueda ser ofrecida al mercado o utilizable por usuarios encargados del monitoreo.
+	\item Aplicación web productiva para gestionar las activaciones del botón antipánico. Por productiva se refiere a que pueda ser ofrecida al mercado o utilizable por usuarios encargados del monitoreo.
 	\item Desarrollo de un dispositivo listo para ser lanzado al mercado, es decir que no sea un prototipo.
 	\item Desarrollo de un contenedor para el dispositivo.
 \end{itemize}
@@ -206,12 +224,12 @@ Este proyecto no incluirá:
 \label{sec:supuestos}
 
 \begin{itemize}
-	\item Todos los componentes de hardware a utilizar están pendientes de definir posterior a una investigación inicial.
+	\item Todos los componentes de hardware a utilizar serán definidos luego de una una investigación preliminar.
 	\item Se intentará utilizar parte del material aprendido durante el curso de especialización relacionado a la programación de sistemas embebidos (bibliotecas, firmware, etc.).
-	\item Se utilizará una microcontrolador que pueda ser adquirido a un costo relativamente bajo.
+	\item Se utilizará un microcontrolador que pueda ser adquirido a un costo relativamente bajo.
 	\item Se contará con un chip de telefonía móvil para utilizar en el proyecto.
-	\item Se adquirirán un módulo de localización satelital, una batería compatible, un módulo de telefonía móvil y un pulsador que estén disponibles en el mercado local.
-	\item Para recepcionar los SMS, se contratará un servicio web que permita recibir los mensajes y redireccionarlos a la aplicación web.
+	\item Se adquirirán: un módulo de localización satelital, una batería compatible, un módulo de telefonía móvil y un pulsador que estén disponibles en el mercado local.
+	\item Para recibir los SMS, se contratará un servicio web que permita recibir los mensajes y redireccionarlos a la aplicación web.
 
 \end{itemize}
 
@@ -291,8 +309,7 @@ Los entregables del proyecto son:
 	\item Informe final
 \end{itemize}
 
-
-<\section{9. Desglose del trabajo en tareas}
+\section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
 
