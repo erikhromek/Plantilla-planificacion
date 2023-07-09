@@ -20,8 +20,8 @@
 \autor{Erik Hromek} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Por definir}
-\pertenenciaDirector{Por definir} 
+\director{Mg. Ing. Lucas Dórdolo}
+\pertenenciaDirector{FIUBA} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 %\codirector{Por definir} % para que aparezca en la portada se debe descomentar la opción codirector en el documentclass
 %\pertenenciaCoDirector{Por definir}
@@ -218,52 +218,62 @@ Este proyecto no incluirá:
 \section{6. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red}
-Los requerimientos deben numerarse y de ser posible estar agruparlos por afinidad, por ejemplo:
+Los requerimientos se listan agrupados por afinidad:
 
 \begin{enumerate}
-	\item Requerimientos funcionales
-		\begin{enumerate}
-			\item El sistema debe...
-			\item Tal componente debe...
-			\item El usuario debe poder...
-		\end{enumerate}
-	\item Requerimientos de documentación
-		\begin{enumerate}
-			\item Requerimiento 1
-			\item Requerimiento 2 (prioridad menor)
-		\end{enumerate}
-	\item Requerimiento de testing...
-	\item Requerimientos de la interfaz...
-	\item Requerimientos interoperabilidad...
-	\item etc...
+\item Grupo de requerimientos del dispositivo geolocalizador:
+	\begin{enumerate}
+	\item Contar una batería recargable que dure al menos 120 horas (5 días) que sea cargable mediante un cable Micro USB
+	\item Contar con botones para encendido/apagado y activación de una alerta
+	\item Tener un indicador del estado del dispositivo: encendido/apagado, señal de telefonía móvil, señal de GPS, nivel de batería
+	\item Contar con conectividad a la red de telefonía móvil
+	\item Obtener períodicamente la ubicación actual del dispositivo y guardarla internamente
+	\item Permitir configurar un número de teléfono para enviar una alerta por mensaje de texto o mediante una web
+	\item Tener un mecanismo de notificación cuando se active el envío de una alerta, mediante vibración o sonido
+	\item Incluir la ubicación del dispositivo en la notificación de alerta
+	\item Poder configurar un número de teléfono como administrador
+	\item Permitir configurar otros parámetros necesarios para el funcionamiento del dispositivo, por ejemplo datos de la red de telefonía móvil
+	\item Tener un almacenamiento persistente para la configuración
+	\end{enumerate}
+\item Grupo de requerimientos asociados al sistema web de recepción de alertas (prueba de concepto):
+	\begin{enumerate}
+	\item Recibir las alertas enviadas a un número de teléfono designado y almacenarlas
+	\item Tener la posibilidad de crear usuarios administradores
+	\item Contar con un acceso web para poder cargar nuevos dispositivos y visualizar alertas
+	\item Contar con una sección para obtener y descargar el historial de alertas de un dispositivo
+	\item Impedir que un dispositivo no habilitado envíe alertas al sistema
+	\item Debe poder ser desplegable en un entorno \textit{cloud} o \textit{on-premise}
+	\end{enumerate}
+\item Grupo de requerimientos de documentación:
+	\begin{enumerate}
+	\item Incluir un \textit{datasheet} del dispositivo que permita la integración del dispositivo a otros sistemas web
+	\item Disponer un manual de configuración del dispositivo
+	\item Contar con una licencia de código abierto para el dispositivo localizador
+	\end{enumerate}
 \end{enumerate}
-
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales. 
-
-No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-	\item Ser breve y conciso (nadie lee cosas largas). 
-	\item Ser específico: no dejar lugar a confusiones.
-	\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna}
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+Respecto al peso, se asignarán los valores de acuerdo a una escala basada en la sucesión de Fibonacci, siendo 1 el valor más bajo y 21 el valor más alto, representando este número una tarea extremadamente compleja (podría tomar más de 3 semanas).
 
-El formato propuesto es: "como [rol] quiero [tal cosa] para [tal otra cosa]."
+\begin{itemize}
+	\item Como usuario del dispositivo deseo poder visualizar el estado de: el dispositivo, la batería, la señal de telefonía móvil y la señal de GPS. Valor: 13.
+	\item Como usuario del dispositivo quiero que el dispositivo tenga un botón físico para prender y apagar el dispositivo. Valor: 5.
+	\item Como usuario del dispositivo deseo poder disparar un alerta mediante un botón y recibir una notificación del dispositivo indicando que se disparó la alerta: Valor: 5.
+	\item Como usuario del dispositivo deseo poder cargar el dispositivo con una alimentación similar a la de los teléfonos móviles para poder utilizarlo sin ningún equipamiento extra. Valor: 5.
+	\item Como usuario administrador quiero poder configurar un teléfono asociado a un dispositivo para que reporte alertas hacia la plataforma web. Valor: 3.
+	\item Como usuario administrador quiero poder acceder a la configuración actual del dispositivo para saber cómo está configurado actualmente. Valor: 3.
+	\item Como usuario administrador quiero poder limitar quién puede configurar el dispositivo para que solamente yo pueda modificar su funcionamiento. Valor: 5.
+	\item Como usuario administrador quiero poder ingresar a la plataforma web mediante un \textit{login} para hacer uso de esta. Valor: 5.
+	\item Como usuario administrador quiero poder crear nuevos usuarios para que tengan acceso a la plataforma web. Valor: 3.
+	\item Como usuario administrador quiero poder dar de alta dispositivos para utilizar como botones antipánico. Valor: 3.
+	\item Como usuario administrador quiero poder recibir, visualizar y almacenar en tiempo real las alertas recibidas en el sistema web para gestionarlas. Valor: 13.
+	\item Como usuario administrador quiero poder visualizar y exportar un reporte de alertas de un dispositivo para tener la información por fuera del sistema web. Valor: 8.
+	\item Como usuario administrador quiero contar con un manual de los dispositivos para poder configurarlos. Valor: 3.
 
-Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia
-\end{consigna}
+\end{itemize}
+
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
