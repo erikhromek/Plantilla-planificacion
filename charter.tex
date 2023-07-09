@@ -278,55 +278,104 @@ Respecto al peso, se asignarán los valores de acuerdo a una escala basada en la
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
 
-Los entregables del proyecto son (ejemplo):
+Los entregables del proyecto son:
 
 \begin{itemize}
-	\item Manual de uso
-	\item Diagrama de circuitos esquemáticos
-	\item Código fuente del firmware
-	\item Diagrama de instalación
+	\item Prototipo de dispositivo geolocalizador
+	\item Aplicación web desplegada en un entorno \textit{cloud}
+	\item Código fuente del firmware del dispositivo
+	\item Código fuente de la aplicación web
+	\item Documentación asociada a la aplicación web
+	\item Manual del dispositivo
 	\item Informe final
-	\item etc...
 \end{itemize}
 
-\end{consigna}
 
-\section{9. Desglose del trabajo en tareas}
+<\section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-El WBS debe tener relación directa o indirecta con los requerimientos.  Son todas las actividades que se harán en el proyecto para dar cumplimiento a los requerimientos. Se recomienda mostrar el WBS mediante una lista indexada:
 
 \begin{enumerate}
-\item Grupo de tareas 1
+\item Planificación del proyecto (44 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas h)
+	\item Definición de requerimientos (10 hs)
+	\item Armado de documentación (32 hs)
+	\item Revisión de requerimientos con el director (2 hs)
 	\end{enumerate}
-\item Grupo de tareas 2
+\item Investigación previa (60 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
+	\item Investigación de microcontrolador y plataforma a usar (8 hs)
+	\item Investigación de módulos y sensores a adquirir (12 hs)
+	\item Análisis del consumo de energía del dispositivo (8 hs)
+	\item Investigación y comparación de proveedores \textit{cloud} (8 hs)
+	\item Análisis de tecnologías web (8 hs)
+	\item Investigación de servicios para interfaz web receptora de SMS (12 hs)
+	\item Definición de entornos de desarrollo para la programación embebida y web (4 hs)
 	\end{enumerate}
-\item Grupo de tareas 3
+\item Desarrollo e implementación de dispositivo embebido (134 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
-	\item Tarea 4 (tantas h)
-	\item Tarea 5 (tantas h)
+	\item \textit{Setup} inicial del firmware (6 hs)
+	\item Realizar diagrama esquemático del dispositivo y sus módulos (8 hs)
+	\item Realizar pruebas iniciales de conexión del dispositivo y sus módulos (8 hs)
+	\item Desarrollo del sistema asociado al módulo de telefonía móvil (16 hs)
+	\item Desarrollo del sistema asociado al módulo de localización satelital (12 hs)
+	\item Desarrollo del sistema asociado al módulo de configuración y almacenamiento de parámetros (16 hs)
+	\item Desarrollo del sistema asociado a la gestión del estado del dispositivo (16 hs)
+	\item Desarrollo del sistema asociado al encendido y apagado del dispositivo (4 hs)
+	\item Desarrollo del sistema asociado al módulo para disparar alertas (12 hs)
+	\item Desarrollo del sistema asociado al manejo de batería y energía del dispositivo (16 hs)
+	\item Desarrollo de integración entre todos los módulos al sistema operativo de tiempo real (20 hs)
+	\end{enumerate}
+\item Desarrollo y despliegue de sistema web (206 hs)
+	\begin{enumerate}
+	\item Armado de modelo de datos (12 hs)
+	\item Armado de maquetas funcionales para interfaz de usuario (8 hs)
+	\item \textit{Setup} inicial del \textit{backend} (4 hs)
+	\item Desarrollo de módulo de gestión de usuarios (16 hs)
+	\item Desarrollo de módulo de gestión de dispositivos (16 hs)
+	\item Desarrollo de módulo de recepción de alertas mediante un número de teléfono asignado (20 hs)
+	\item Desarrollo de módulo de gestión de alertas (20 hs)
+	\item Implementación de pruebas unitarias generales del \textit{backend} (20 hs)
+	\item \textit{Setup} inicial del \textit{frontend} (2 hs)
+	\item Desarrollo de interfaces de usuario de administración del sistema web e integración al \textit{backend} (25 hs)
+	\item Desarrollo de interfaz de usuario para gestión de alertas y e integración al \textit{backend} (40 hs)
+	\item Integración al \textit{backend} y depuración de interfaces de usuario conectadas (20 hs)
+	\item Despliegue de sistema web (6 hs)
+	\end{enumerate}
+\item Pruebas de funcionamiento del sistema (46 hs)
+	\begin{enumerate}
+	\item Pruebas del dispositivo (30 hs)
+	    \begin{enumerate}
+	    \item Pruebas de funcionamiento de la conexión del dispositivo a la red de telefonía móvil (4 hs)
+	    \item Pruebas de funcionamiento de la localización satelital del dispositivo (4 hs)
+	    \item Pruebas de funcionamiento del dispositivo con los indicadores de estado (4 hs)
+	    \item Pruebas de funcionamiento de las alertas del dispositivo (4 hs)
+	    \item Pruebas de funcionamiento de la configuración persistente del dispositivo (4 hs)	
+	    \item Pruebas de funcionamiento de la duración de la batería (8 hs)
+	    \item Pruebas de funcionamiento del dispositivo con el actuador de encedido (2 hs)
+	    \end{enumerate}
+	\item Pruebas del sistema web (28 hs)
+	    \begin{enumerate}
+	    \item Pruebas de funcionamiento de creación y edición de usuarios (6 hs)
+	    \item Pruebas de funcionamiento de creación y edición de dispositivos (6 hs)
+	    \item Pruebas de funcionamiento de módulo de gestión de alertas (8 hs)
+	    \item Pruebas de circuito completo del dispositivo y la plataforma (8 hs)
+	    \end{enumerate}
+	\end{enumerate}
+\item Armado de documentación y manuales (36 hs)
+	\begin{enumerate}
+	\item Armado de manual del dispositivo (20 hs)
+	\item Armado de documentación del sistema web (16 hs)
+	\end{enumerate}
+\item Elaboración de documentación del proyecto (60 hs)
+	\begin{enumerate}
+	\item Elaboración de memoria técnica del proyecto (40 hs)
+	\item Elaboración de presentación del proyecto (20 hs)
 	\end{enumerate}
 \end{enumerate}
 
-Cantidad total de horas: (tantas h)
-
-Se recomienda que no haya ninguna tarea que lleve más de 40 h. 
-
-\end{consigna}
+Cantidad total de horas estimadas: 598 hs
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
