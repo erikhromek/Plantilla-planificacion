@@ -71,7 +71,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
 1      & Se completa hasta el punto 5 inclusive                 & 04/07/2023 \\ \hline
 2          & Se aplican correcciones hasta el punto 5 inclusive                  & 9/07/2023 \\ \hline
-3          & Se completa hasta el punto 9 inclusive                 & 10/07/2023 \\ \hline
+3          & Se completa hasta el punto 9 inclusive                 & 11/07/2023 \\ \hline
 
 %2      & Se completa hasta el punto 7 inclusive
 %		  Se puede agregar algo más \newline
@@ -241,51 +241,51 @@ Los requerimientos se listan agrupados por afinidad:
 \begin{enumerate}
 \item Grupo de requerimientos del dispositivo geolocalizador:
 	\begin{enumerate}
-	\item Contar una batería recargable que dure al menos 120 horas (5 días) que sea cargable mediante un cable Micro USB
-	\item Contar con botones para encendido/apagado y activación de una alerta
-	\item Tener un indicador del estado del dispositivo: encendido/apagado, señal de telefonía móvil, señal de GPS, nivel de batería
-	\item Contar con conectividad a la red de telefonía móvil
-	\item Obtener períodicamente la ubicación actual del dispositivo y guardarla internamente
-	\item Permitir configurar un número de teléfono para enviar una alerta por mensaje de texto o mediante una web
-	\item Tener un mecanismo de notificación cuando se active el envío de una alerta, mediante vibración o sonido
-	\item Incluir la ubicación del dispositivo en la notificación de alerta
-	\item Poder configurar un número de teléfono como administrador
-	\item Permitir configurar otros parámetros necesarios para el funcionamiento del dispositivo, por ejemplo datos de la red de telefonía móvil
-	\item Tener un almacenamiento persistente para la configuración
+	\item Contar una batería recargable que dure al menos 120 horas (5 días) y sea cargable mediante un cable \textit{Micro USB}.
+	\item Contar con botones para encendido/apagado y activación de una alerta.
+	\item Tener un indicador del estado del dispositivo: encendido/apagado, señal de telefonía móvil, señal de GPS y nivel de batería.
+	\item Contar con conectividad a la red de telefonía móvil.
+	\item Obtener períodicamente la ubicación actual del dispositivo y guardarla internamente.
+	\item Permitir configurar un número de teléfono para enviar una alerta por mensaje de texto.
+	\item Tener un mecanismo de notificación cuando se dispare una alerta, mediante vibración o sonido.
+	\item Incluir la ubicación del dispositivo en el mensaje de alerta.
+	\item Poder configurar un número de teléfono como administrador del dispositivo.
+	\item Permitir configurar parámetros necesarios para el funcionamiento del dispositivo, por ejemplo datos de la red de telefonía móvil.
+	\item Contar con almacenamiento persistente para la configuración.
 	\end{enumerate}
-\item Grupo de requerimientos asociados al sistema web de recepción de alertas (prueba de concepto):
+\item Grupo de requerimientos asociados al sistema web de gestión de dispositivos y alertas:
 	\begin{enumerate}
-	\item Recibir las alertas enviadas a un número de teléfono designado y almacenarlas
-	\item Tener la posibilidad de crear usuarios administradores
-	\item Contar con un acceso web para poder cargar nuevos dispositivos y visualizar alertas
-	\item Contar con una sección para obtener y descargar el historial de alertas de un dispositivo
-	\item Impedir que un dispositivo no habilitado envíe alertas al sistema
-	\item Debe poder ser desplegable en un entorno \textit{cloud} o \textit{on-premise}
+	\item Recibir y almacenar las alertas enviadas a un número de teléfono designado.
+	\item Permitir crear usuarios administradores.
+	\item Contar con un acceso web para poder cargar nuevos dispositivos y visualizar alertas.
+	\item Contar con una sección para visualizar y exportar el historial de alertas de un dispositivo.
+	\item Impedir que un dispositivo no habilitado envíe alertas al sistema.
+	\item Debe poder ser desplegable en un entorno \textit{cloud} u \textit{on-premise}.
 	\end{enumerate}
 \item Grupo de requerimientos de documentación:
 	\begin{enumerate}
-	\item Incluir un \textit{datasheet} del dispositivo que permita la integración del dispositivo a otros sistemas web
-	\item Disponer un manual de configuración del dispositivo
-	\item Contar con una licencia de código abierto para el dispositivo localizador
+	\item Incluir un \textit{datasheet} del dispositivo que permita la integración del dispositivo a otros sistemas web.
+	\item Incorporar un manual de configuración del dispositivo.
+	\item Contar con una licencia de código abierto para el dispositivo.
 	\end{enumerate}
 \end{enumerate}
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-Respecto al peso, se asignarán los valores de acuerdo a una escala basada en la sucesión de Fibonacci, siendo 1 el valor más bajo y 21 el valor más alto, representando este número una tarea extremadamente compleja (podría tomar más de 3 semanas).
+Respecto al peso, se asignarán los valores de acuerdo a una escala basada en la sucesión de Fibonacci, siendo 1 el valor más bajo y 21 el valor más alto, representando este número una tarea extremadamente compleja.
 
 \begin{itemize}
 	\item Como usuario del dispositivo deseo poder visualizar el estado de: el dispositivo, la batería, la señal de telefonía móvil y la señal de GPS. Valor: 13.
 	\item Como usuario del dispositivo quiero que el dispositivo tenga un botón físico para prender y apagar el dispositivo. Valor: 5.
 	\item Como usuario del dispositivo deseo poder disparar un alerta mediante un botón y recibir una notificación del dispositivo indicando que se disparó la alerta: Valor: 5.
-	\item Como usuario del dispositivo deseo poder cargar el dispositivo con una alimentación similar a la de los teléfonos móviles para poder utilizarlo sin ningún equipamiento extra. Valor: 5.
-	\item Como usuario administrador quiero poder configurar un teléfono asociado a un dispositivo para que reporte alertas hacia la plataforma web. Valor: 3.
-	\item Como usuario administrador quiero poder acceder a la configuración actual del dispositivo para saber cómo está configurado actualmente. Valor: 3.
+	\item Como usuario del dispositivo deseo poder cargar el dispositivo con un cargador similar al de los teléfonos móviles para poder utilizarlo en cualquier lugar. Valor: 5.
+	\item Como usuario administrador quiero poder configurar un teléfono asociado a un dispositivo para que reporte alertas hacia el número designado. Valor: 3.
+	\item Como usuario administrador quiero poder recuperar la configuración actual del dispositivo para saber cómo está configurado actualmente. Valor: 3.
 	\item Como usuario administrador quiero poder limitar quién puede configurar el dispositivo para que solamente yo pueda modificar su funcionamiento. Valor: 5.
 	\item Como usuario administrador quiero poder ingresar a la plataforma web mediante un \textit{login} para hacer uso de esta. Valor: 5.
 	\item Como usuario administrador quiero poder crear nuevos usuarios para que tengan acceso a la plataforma web. Valor: 3.
-	\item Como usuario administrador quiero poder dar de alta dispositivos para utilizar como botones antipánico. Valor: 3.
+	\item Como usuario administrador quiero poder dar de alta dispositivos para utilizar como botones antipánico. Valor: 5.
 	\item Como usuario administrador quiero poder recibir, visualizar y almacenar en tiempo real las alertas recibidas en el sistema web para gestionarlas. Valor: 13.
 	\item Como usuario administrador quiero poder visualizar y exportar un reporte de alertas de un dispositivo para tener la información por fuera del sistema web. Valor: 8.
 	\item Como usuario administrador quiero contar con un manual de los dispositivos para poder configurarlos. Valor: 3.
@@ -324,7 +324,7 @@ Los entregables del proyecto son:
 	\begin{enumerate}
 	\item Investigación de microcontrolador y plataforma a usar (8 hs)
 	\item Investigación de módulos y sensores a adquirir (12 hs)
-	\item Análisis del consumo de energía del dispositivo (8 hs)
+	\item Análisis del consumo de energía del dispositivo y los módulos (8 hs)
 	\item Investigación y comparación de proveedores \textit{cloud} (8 hs)
 	\item Análisis de tecnologías web (8 hs)
 	\item Investigación de servicios para interfaz web receptora de SMS (12 hs)
@@ -338,11 +338,10 @@ Los entregables del proyecto son:
 	\item Desarrollo del sistema asociado al módulo de telefonía móvil (16 hs)
 	\item Desarrollo del sistema asociado al módulo de localización satelital (12 hs)
 	\item Desarrollo del sistema asociado al módulo de configuración y almacenamiento de parámetros (16 hs)
-	\item Desarrollo del sistema asociado a la gestión del estado del dispositivo (16 hs)
-	\item Desarrollo del sistema asociado al encendido y apagado del dispositivo (4 hs)
-	\item Desarrollo del sistema asociado al módulo para disparar alertas (12 hs)
+	\item Desarrollo del sistema asociado a la gestión del estado del dispositivo (20 hs)
+	\item Desarrollo del sistema asociado al módulo de alertas (12 hs)
 	\item Desarrollo del sistema asociado al manejo de batería y energía del dispositivo (16 hs)
-	\item Desarrollo de integración entre todos los módulos al sistema operativo de tiempo real (20 hs)
+	\item Integración entre todos los módulos al sistema operativo de tiempo real (20 hs)
 	\end{enumerate}
 \item Desarrollo y despliegue de sistema web (206 hs)
 	\begin{enumerate}
@@ -351,13 +350,13 @@ Los entregables del proyecto son:
 	\item \textit{Setup} inicial del \textit{backend} (4 hs)
 	\item Desarrollo de módulo de gestión de usuarios (16 hs)
 	\item Desarrollo de módulo de gestión de dispositivos (16 hs)
-	\item Desarrollo de módulo de recepción de alertas mediante un número de teléfono asignado (20 hs)
+	\item Implementación de módulo de recepción de alertas (20 hs)
 	\item Desarrollo de módulo de gestión de alertas (20 hs)
 	\item Implementación de pruebas unitarias generales del \textit{backend} (20 hs)
 	\item \textit{Setup} inicial del \textit{frontend} (2 hs)
-	\item Desarrollo de interfaces de usuario de administración del sistema web e integración al \textit{backend} (25 hs)
-	\item Desarrollo de interfaz de usuario para gestión de alertas y e integración al \textit{backend} (40 hs)
-	\item Integración al \textit{backend} y depuración de interfaces de usuario conectadas (20 hs)
+	\item Desarrollo de interfaces de usuario de administración (25 hs)
+	\item Desarrollo de interfaz de usuario para gestión de alertas (40 hs)
+	\item Integración al \textit{backend} y pruebas de interfaces de usuario (20 hs)
 	\item Despliegue de sistema web (6 hs)
 	\end{enumerate}
 \item Pruebas de funcionamiento del sistema (46 hs)
