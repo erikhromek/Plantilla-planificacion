@@ -39,7 +39,7 @@
 %\pertenenciaJurTres{pertenencia (3)}
  
 \fechaINICIO{20 de junio de 2023}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{8 de julio de 2023} 	%Fecha de final de cursada de GdP
+\fechaFINALPlan{08 de julio de 2023} 	%Fecha de final de cursada de GdP
 \fechaFINALTrabajo{???}	%Fecha de defensa pública del trabajo final
 
 
@@ -68,10 +68,11 @@
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
-0      & Creación del documento                                 &\fechaInicioName \\ \hline
+0      & Creación del documento                                 & 20/06/2023 \\ \hline
 1      & Se completa hasta el punto 5 inclusive                 & 04/07/2023 \\ \hline
-2          & Se aplican correcciones hasta el punto 5 inclusive                  & 9/07/2023 \\ \hline
+2          & Se aplican correcciones hasta el punto 5 inclusive                  & 09/07/2023 \\ \hline
 3          & Se completa hasta el punto 9 inclusive                 & 11/07/2023 \\ \hline
+4          & Se aplican correcciones hasta el punto 9 inclusive                & 13/07/2023 \\ \hline
 
 %2      & Se completa hasta el punto 7 inclusive
 %		  Se puede agregar algo más \newline
@@ -95,7 +96,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un prototipo de un botón antipánico y localizador, y tendrá un presupuesto preliminar estimado de \textcolor{red}{600} h de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un prototipo de un botón antipánico y localizador, y tendrá un presupuesto preliminar estimado de \textcolor{red}{600} h de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -154,7 +155,7 @@ Adicionalmente, se encuentran algunos componentes web a incorporar en el marco d
 	\item Base de datos: funcionará como almacenamiento persistente de la aplicación web anterior.
 \end{itemize}
 
-Estos componentes se utilizarán a modo de prueba de concepto para probar el correcto funcionamiento del prototipo de botón. También funcionarán como caso de uso para integrar este dispositivo a cualquier plataforma web de similares características.
+Estos componentes se utilizarán a modo de prueba de concepto para probar el correcto funcionamiento del prototipo del botón. También funcionarán como caso de uso para integrar este dispositivo a cualquier plataforma web de similares características.
 
 \begin{figure}[htpb]
 \centering 
@@ -182,32 +183,31 @@ Usuario Final    & Ciudadano & - 	& - \\ \hline
 
 \begin{itemize}
 	\item Responsable: principal interesado en la implementación exitosa del dispositivo, posee interés en continuar con el trabajo en futuras etapas.
-	\item Orientador: el directo posee experiencia dirigiendo aplicaciones con características similares, pero no posee una gran disponibilidad para colaborar; debe acudirse a él solamente con cuestiones muy focalizadas
+	\item Orientador: el director posee experiencia dirigiendo aplicaciones con características similares, pero no posee una gran disponibilidad para colaborar; debe acudirse a él solamente con cuestiones muy focalizadas
 \end{itemize}
 
 
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-El propósito de este proyecto es validar la idea de que es posible implementar, al menos de forma inicial, un dispositivo que funcione como botón antipánico y localizador. Se busca lograr que este dispositivo permita notificar la ubicación del usuario final al momento de ser activado via SMS o web y que además trabaje de forma autónoma con una batería.
+El propósito de este proyecto es validar la idea de que es posible implementar, al menos de forma inicial, un dispositivo que funcione como botón antipánico y localizador. Se busca lograr que este dispositivo permita notificar la ubicación del usuario final al momento de ser activado vía SMS o web y que además trabaje de forma autónoma con una batería.
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
 Para la realización de este proyecto se llevará a cabo:
 \begin{itemize}
-	\item una investigación preliminar en relación a los componentes a utilizar,
-	\item la implementación del hardware del botón antipánico,
-	\item el desarrollo del firmware o software para controlar el dispositivo y
-	\item el desarrollo de una plataforma web para recibir las activaciones del botón antipánico.
+	\item Una investigación preliminar con relación a los componentes a utilizar.
+	\item La implementación del hardware del botón antipánico.
+	\item El desarrollo del firmware o software para controlar el dispositivo.
+	\item El desarrollo de una plataforma web para recibir las activaciones del botón antipánico.
 \end{itemize}
-
 
 La implementación del dispositivo incluirá:
 \begin{itemize}
-	\item conectividad mediante redes móviles,
-	\item el uso de un módulo de posicionamiento satelital para tomar la ubicación actual de la persona y
-	\item un mecanismo de configuración/parametrización del dispositivo que sea persistente.
+	\item Conectividad mediante redes móviles.
+	\item El uso de un módulo de posicionamiento satelital para tomar la ubicación actual de la persona.
+	\item Un mecanismo de configuración/parametrización del dispositivo que sea persistente.
 \end{itemize}
 Además, contará con alimentación mediante una batería de prestaciones acordes al tamaño del dispositivo y se realizará una investigación acerca del consumo energético de este.
 
@@ -224,7 +224,7 @@ Este proyecto no incluirá:
 \label{sec:supuestos}
 
 \begin{itemize}
-	\item Todos los componentes de hardware a utilizar serán definidos luego de una una investigación preliminar.
+	\item Todos los componentes de hardware a utilizar serán definidos luego de una investigación preliminar.
 	\item Se intentará utilizar parte del material aprendido durante el curso de especialización relacionado a la programación de sistemas embebidos (bibliotecas, firmware, etc.).
 	\item Se utilizará un microcontrolador que pueda ser adquirido a un costo relativamente bajo.
 	\item Se contará con un chip de telefonía móvil para utilizar en el proyecto.
@@ -245,12 +245,12 @@ Los requerimientos se listan agrupados por afinidad:
 	\item Contar con botones para encendido/apagado y activación de una alerta.
 	\item Tener un indicador del estado del dispositivo: encendido/apagado, señal de telefonía móvil, señal de GPS y nivel de batería.
 	\item Contar con conectividad a la red de telefonía móvil.
-	\item Obtener períodicamente la ubicación actual del dispositivo y guardarla internamente.
+	\item Obtener periódicamente la ubicación actual del dispositivo y guardarla internamente.
 	\item Permitir configurar un número de teléfono para enviar una alerta por mensaje de texto.
 	\item Tener un mecanismo de notificación cuando se dispare una alerta, mediante vibración o sonido.
 	\item Incluir la ubicación del dispositivo en el mensaje de alerta.
 	\item Poder configurar un número de teléfono como administrador del dispositivo.
-	\item Permitir configurar parámetros necesarios para el funcionamiento del dispositivo, por ejemplo datos de la red de telefonía móvil.
+	\item Permitir configurar parámetros necesarios para el funcionamiento del dispositivo, por ejemplo, datos de la red de telefonía móvil.
 	\item Contar con almacenamiento persistente para la configuración.
 	\end{enumerate}
 \item Grupo de requerimientos asociados al sistema web de gestión de dispositivos y alertas:
@@ -273,12 +273,12 @@ Los requerimientos se listan agrupados por afinidad:
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-Respecto al peso, se asignarán los valores de acuerdo a una escala basada en la sucesión de Fibonacci, siendo 1 el valor más bajo y 21 el valor más alto, representando este número una tarea extremadamente compleja.
+Respecto al peso, se asignarán los valores de acuerdo con una escala basada en la sucesión de Fibonacci, siendo 1 el valor más bajo y 21 el valor más alto, representando este número una tarea extremadamente compleja.
 
 \begin{itemize}
 	\item Como usuario del dispositivo deseo poder visualizar el estado de: el dispositivo, la batería, la señal de telefonía móvil y la señal de GPS. Valor: 13.
-	\item Como usuario del dispositivo quiero que el dispositivo tenga un botón físico para prender y apagar el dispositivo. Valor: 5.
-	\item Como usuario del dispositivo deseo poder disparar un alerta mediante un botón y recibir una notificación del dispositivo indicando que se disparó la alerta: Valor: 5.
+	\item Como usuario del dispositivo quiero que este tenga un botón físico para encender y apagar el dispositivo. Valor: 5.
+	\item Como usuario del dispositivo deseo poder disparar una alerta mediante un botón y recibir una notificación del dispositivo indicando que se disparó la alerta: Valor: 5.
 	\item Como usuario del dispositivo deseo poder cargar el dispositivo con un cargador similar al de los teléfonos móviles para poder utilizarlo en cualquier lugar. Valor: 5.
 	\item Como usuario administrador quiero poder configurar un teléfono asociado a un dispositivo para que reporte alertas hacia el número designado. Valor: 3.
 	\item Como usuario administrador quiero poder recuperar la configuración actual del dispositivo para saber cómo está configurado actualmente. Valor: 3.
@@ -300,13 +300,13 @@ Respecto al peso, se asignarán los valores de acuerdo a una escala basada en la
 Los entregables del proyecto son:
 
 \begin{itemize}
-	\item Prototipo de dispositivo geolocalizador
-	\item Aplicación web desplegada en un entorno \textit{cloud}
-	\item Código fuente del firmware del dispositivo
-	\item Código fuente de la aplicación web
-	\item Documentación asociada a la aplicación web
-	\item Manual del dispositivo
-	\item Informe final
+	\item Prototipo de dispositivo geolocalizador.
+	\item Aplicación web desplegada en un entorno \textit{cloud}.
+	\item Código fuente del firmware del dispositivo.
+	\item Código fuente de la aplicación web.
+	\item Documentación asociada a la aplicación web.
+	\item Manual del dispositivo.
+	\item Informe final.
 \end{itemize}
 
 \section{9. Desglose del trabajo en tareas}
@@ -314,84 +314,85 @@ Los entregables del proyecto son:
 
 
 \begin{enumerate}
-\item Planificación del proyecto (44 hs)
+\item Planificación del proyecto (46 h)
 	\begin{enumerate}
-	\item Definición de requerimientos (10 hs)
-	\item Armado de documentación (32 hs)
-	\item Revisión de requerimientos con el director (2 hs)
+	\item Definición de requerimientos (10 h)
+	\item Armado de la planificación (32 h)
+	\item Revisión de la planificación (2 h)
+	\item Revisión de requerimientos con el director (2 h)
 	\end{enumerate}
-\item Investigación previa (60 hs)
+\item Investigación previa (60 h)
 	\begin{enumerate}
-	\item Investigación de microcontrolador y plataforma a usar (8 hs)
-	\item Investigación de módulos y sensores a adquirir (12 hs)
-	\item Análisis del consumo de energía del dispositivo y los módulos (8 hs)
-	\item Investigación y comparación de proveedores \textit{cloud} (8 hs)
-	\item Análisis de tecnologías web (8 hs)
-	\item Investigación de servicios para interfaz web receptora de SMS (12 hs)
-	\item Definición de entornos de desarrollo para la programación embebida y web (4 hs)
+	\item Investigación de microcontrolador y plataforma a usar (8 h)
+	\item Investigación de módulos y sensores a adquirir (12 h)
+	\item Análisis del consumo de energía del dispositivo y los módulos (8 h)
+	\item Investigación y comparación de proveedores \textit{cloud} (8 h)
+	\item Análisis de tecnologías web (8 h)
+	\item Investigación de servicios para interfaz web receptora de SMS (12 h)
+	\item Definición de entornos de desarrollo para la programación embebida y web (4 h)
 	\end{enumerate}
-\item Desarrollo e implementación de dispositivo embebido (134 hs)
+\item Desarrollo e implementación de dispositivo embebido (134 h)
 	\begin{enumerate}
-	\item \textit{Setup} inicial del firmware (6 hs)
-	\item Realizar diagrama esquemático del dispositivo y sus módulos (8 hs)
-	\item Realizar pruebas iniciales de conexión del dispositivo y sus módulos (8 hs)
-	\item Desarrollo del sistema asociado al módulo de telefonía móvil (16 hs)
-	\item Desarrollo del sistema asociado al módulo de localización satelital (12 hs)
-	\item Desarrollo del sistema asociado al módulo de configuración y almacenamiento de parámetros (16 hs)
-	\item Desarrollo del sistema asociado a la gestión del estado del dispositivo (20 hs)
-	\item Desarrollo del sistema asociado al módulo de alertas (12 hs)
-	\item Desarrollo del sistema asociado al manejo de batería y energía del dispositivo (16 hs)
-	\item Integración entre todos los módulos al sistema operativo de tiempo real (20 hs)
+	\item \textit{Setup} inicial del firmware (6 h)
+	\item Realizar diagrama esquemático del dispositivo y sus módulos (8 h)
+	\item Realizar pruebas iniciales de conexión del dispositivo y sus módulos (8 h)
+	\item Desarrollo del sistema asociado al módulo de telefonía móvil (16 h)
+	\item Desarrollo del sistema asociado al módulo de localización satelital (12 h)
+	\item Desarrollo del sistema asociado al módulo de configuración y almacenamiento de parámetros (16 h)
+	\item Desarrollo del sistema asociado a la gestión del estado del dispositivo (20 h)
+	\item Desarrollo del sistema asociado al módulo de alertas (12 h)
+	\item Desarrollo del sistema asociado al manejo de batería y energía del dispositivo (16 h)
+	\item Integración entre todos los módulos al sistema operativo de tiempo real (20 h)
 	\end{enumerate}
-\item Desarrollo y despliegue de sistema web (206 hs)
+\item Desarrollo y despliegue de sistema web (209 h)
 	\begin{enumerate}
-	\item Armado de modelo de datos (12 hs)
-	\item Armado de maquetas funcionales para interfaz de usuario (8 hs)
-	\item \textit{Setup} inicial del \textit{backend} (4 hs)
-	\item Desarrollo de módulo de gestión de usuarios (16 hs)
-	\item Desarrollo de módulo de gestión de dispositivos (16 hs)
-	\item Implementación de módulo de recepción de alertas (20 hs)
-	\item Desarrollo de módulo de gestión de alertas (20 hs)
-	\item Implementación de pruebas unitarias generales del \textit{backend} (20 hs)
-	\item \textit{Setup} inicial del \textit{frontend} (2 hs)
-	\item Desarrollo de interfaces de usuario de administración (25 hs)
-	\item Desarrollo de interfaz de usuario para gestión de alertas (40 hs)
-	\item Integración al \textit{backend} y pruebas de interfaces de usuario (20 hs)
-	\item Despliegue de sistema web (6 hs)
+	\item Armado de modelo de datos (12 h)
+	\item Armado de maquetas funcionales para interfaz de usuario (8 h)
+	\item \textit{Setup} inicial del \textit{backend} (4 h)
+	\item Desarrollo de módulo de gestión de usuarios (16 h)
+	\item Desarrollo de módulo de gestión de dispositivos (16 h)
+	\item Implementación de módulo de recepción de alertas (20 h)
+	\item Desarrollo de módulo de gestión de alertas (20 h)
+	\item Implementación de pruebas unitarias generales del \textit{backend} (20 h)
+	\item \textit{Setup} inicial del \textit{frontend} (2 h)
+	\item Desarrollo de interfaces de usuario de administración (25 h)
+	\item Desarrollo de interfaz de usuario para gestión de alertas (40 h)
+	\item Integración al \textit{backend} y pruebas de interfaces de usuario (20 h)
+	\item Despliegue de sistema web (6 h)
 	\end{enumerate}
-\item Pruebas de funcionamiento del sistema (46 hs)
+\item Pruebas de funcionamiento del sistema (58 h)
 	\begin{enumerate}
-	\item Pruebas del dispositivo (30 hs)
+	\item Pruebas del dispositivo (30 h)
 	    \begin{enumerate}
-	    \item Pruebas de funcionamiento de la conexión del dispositivo a la red de telefonía móvil (4 hs)
-	    \item Pruebas de funcionamiento de la localización satelital del dispositivo (4 hs)
-	    \item Pruebas de funcionamiento del dispositivo con los indicadores de estado (4 hs)
-	    \item Pruebas de funcionamiento de las alertas del dispositivo (4 hs)
-	    \item Pruebas de funcionamiento de la configuración persistente del dispositivo (4 hs)	
-	    \item Pruebas de funcionamiento de la duración de la batería (8 hs)
-	    \item Pruebas de funcionamiento del dispositivo con el actuador de encedido (2 hs)
+	    \item Pruebas de funcionamiento de la conexión del dispositivo a la red de telefonía móvil (4 h)
+	    \item Pruebas de funcionamiento de la localización satelital del dispositivo (4 h)
+	    \item Pruebas de funcionamiento del dispositivo con los indicadores de estado (4 h)
+	    \item Pruebas de funcionamiento de las alertas del dispositivo (4 h)
+	    \item Pruebas de funcionamiento de la configuración persistente del dispositivo (4 h)	
+	    \item Pruebas de funcionamiento de la duración de la batería (8 h)
+	    \item Pruebas de funcionamiento del dispositivo con el actuador de encedido (2 h)
 	    \end{enumerate}
-	\item Pruebas del sistema web (28 hs)
+	\item Pruebas del sistema web (28 h)
 	    \begin{enumerate}
-	    \item Pruebas de funcionamiento de creación y edición de usuarios (6 hs)
-	    \item Pruebas de funcionamiento de creación y edición de dispositivos (6 hs)
-	    \item Pruebas de funcionamiento de módulo de gestión de alertas (8 hs)
-	    \item Pruebas de circuito completo del dispositivo y la plataforma (8 hs)
+	    \item Pruebas de funcionamiento de creación y edición de usuarios (6 h)
+	    \item Pruebas de funcionamiento de creación y edición de dispositivos (6 h)
+	    \item Pruebas de funcionamiento de módulo de gestión de alertas (8 h)
+	    \item Pruebas de circuito completo del dispositivo y la plataforma (8 h)
 	    \end{enumerate}
 	\end{enumerate}
-\item Armado de documentación y manuales (36 hs)
+\item Elaboración de documentación y manuales (36 h)
 	\begin{enumerate}
-	\item Armado de manual del dispositivo (20 hs)
-	\item Armado de documentación del sistema web (16 hs)
+	\item Elaboración del manual del dispositivo (20 h)
+	\item Elaboración de documentación del sistema web (16 h)
 	\end{enumerate}
-\item Elaboración de documentación del proyecto (60 hs)
+\item Elaboración de documentación del proyecto (60 h)
 	\begin{enumerate}
-	\item Elaboración de memoria técnica del proyecto (40 hs)
-	\item Elaboración de presentación del proyecto (20 hs)
+	\item Elaboración de memoria técnica del proyecto (40 h)
+	\item Elaboración de presentación del proyecto (20 h)
 	\end{enumerate}
 \end{enumerate}
 
-Cantidad total de horas estimadas: 598 hs
+Cantidad total de horas estimadas: 603 hs
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
