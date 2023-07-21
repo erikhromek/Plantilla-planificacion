@@ -397,82 +397,30 @@ Cantidad total de horas estimadas: 603 hs
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior. 
-
-%La figura \ref{fig:AoN} fue elaborada con el paquete latex tikz y pueden consultar la siguiente referencia \textit{online}:
-
-%\url{https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_3)\%E2\%80\%94Creating_Flowcharts}
-
-\end{consigna}
+El camino crítico, como se observa en la figura 2, son de 433 horas.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
+\includegraphics[width=.9\textwidth]{./Figuras/AoN.png}
 \caption{Diagrama de \textit{Activity on Node}.}
 \label{fig:AoN}
 \end{figure}
 
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
-
-
-
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
-
-Existen muchos programas y recursos \textit{online} para hacer diagramas de Gantt, entre los cuales destacamos:
-
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de Gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-\begin{figure}[htbp]
-\begin{center}
-\begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone o hito}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
-\end{center}
-\caption{Diagrama de Gantt de ejemplo}
-\label{fig:gantt}
-\end{figure}
 
 
-\begin{landscape}
+En la figura 3, se muestra el diagrama de Gantt del proyecto. No se muestran todas las actividades del proyecto sino los principales hitos y su duración. 
+
+
 \begin{figure}[htpb]
 \centering 
-\includegraphics[height=.85\textheight]{./Figuras/Gantt-2.png}
-\caption{Ejemplo de diagrama de Gantt rotado}
+\includegraphics[width=1\textwidth]{./Figuras/Gantt.png}
+\caption{Diagrama de Gantt del proyecto}
 \label{fig:diagGantt}
 \end{figure}
 
-\end{landscape}
-
-\end{consigna}
 
 
 \section{12. Presupuesto detallado del proyecto}
@@ -500,24 +448,45 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+ Ingeniero Jr. &
+  \multicolumn{1}{c|}{603} &
+  \multicolumn{1}{c|}{1500} &
+  \multicolumn{1}{c|}{904500} \\ \hline
+ Microcontrolador &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{6000} &
+  \multicolumn{1}{c|}{6000} \\ \hline
+ Batería &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{4000} &
+  \multicolumn{1}{c|}{4000} \\ \hline
+  Módulo telefonía móvil &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{6000} &
+  \multicolumn{1}{c|}{6000} \\ \hline
+  
+  Módulo GPS &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{6000} &
+  \multicolumn{1}{c|}{6000} \\ \hline
+  
+  Chip telefonía móvil &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{1000} &
+  \multicolumn{1}{c|}{1000} \\ \hline
+  
+  Alojamiento \textit{cloud} &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{15000} &
+  \multicolumn{1}{c|}{15000} \\ \hline
+  
+  API \textit{cloud} para telefonía &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{10000} &
+  \multicolumn{1}{c|}{10000} \\ \hline
+  
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{952500} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -525,26 +494,19 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+\multicolumn{1}{|l|}{10\% de los costos directos} &
+   \multicolumn{1}{|c|}{1} &
+   \multicolumn{1}{|c|}{95250} & 
+   \multicolumn{1}{|c|}{95250} \\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{95250} \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} &
-   \\ \hline
+   1047750\\ \hline
 \end{tabularx}%
 \end{table}
 
+Nota: los costos de los componentes de hardware y los servicios \textit{cloud} son aproximados; se tomó un valor aproximado en base a una revisión de posibles módulos y servicios candidatos al momento de la elaboración de la planificación.
 
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
