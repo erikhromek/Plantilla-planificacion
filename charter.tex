@@ -39,7 +39,7 @@
 %\pertenenciaJurTres{pertenencia (3)}
  
 \fechaINICIO{20 de junio de 2023}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{08 de julio de 2023} 	%Fecha de final de cursada de GdP
+\fechaFINALPlan{08 de agosto de 2023} 	%Fecha de final de cursada de GdP
 \fechaFINALTrabajo{???}	%Fecha de defensa pública del trabajo final
 
 
@@ -406,36 +406,52 @@ El camino crítico, como se observa en la figura 2, son de 433 horas.
 \label{fig:AoN}
 \end{figure}
 
+Nota: no se desglosaron las actividades correspondientes a las pruebas del dispositivo (5.1) y pruebas del sistema web (5.2) para no ocupar complejizar el gráfico de \textit{Activity On Node} pero estas están todas relacionadas entre sí.
+
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
+En la figura 3, se muestra el desglose de actividades del proyecto, y en las figuras 4, 5 y 6 se presenta de forma ordenada todo el plan de actividades ordenado en el tiempo.
 
-
-En la figura 3, se muestra el diagrama de Gantt del proyecto. No se muestran todas las actividades del proyecto sino los principales hitos y su duración. 
-
-
+El cronograma de las actividades está planificado a razón de 25 horas de dedicación semanal, posterior a la finalización de la planificación.
+ 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=1\textwidth]{./Figuras/Gantt.png}
-\caption{Diagrama de Gantt del proyecto}
-\label{fig:diagGantt}
+\includegraphics[width=.9\textwidth]{./Figuras/WBS.png}
+\caption{Desglose de actividades del proyecto}
+\label{fig:diagGanttWBS}
 \end{figure}
 
+\begin{landscape}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=\paperwidth]{./Figuras/Gantt1.png}
+\caption{Diagrama de Gantt del proyecto (primera parte)}
+\label{fig:diagGantt1}
+\end{figure}
+\end{landscape}
+
+\begin{landscape}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=\paperwidth]{./Figuras/Gantt2.png}
+\caption{Diagrama de Gantt del proyecto (segunda parte)}
+\label{fig:diagGantt2}
+\end{figure}
+\end{landscape}
+
+\begin{landscape}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[height=.9\textheight]{./Figuras/Gantt3.png}
+\caption{Diagrama de Gantt del proyecto (tercera parte)}
+\label{fig:diagGantt3}
+\end{figure}
+\end{landscape}
 
 
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
-
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-	\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-	\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
-
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-\end{consigna}
 
 \begin{table}[htpb]
 \centering
@@ -475,6 +491,11 @@ Descripción &
   \multicolumn{1}{c|}{1000} &
   \multicolumn{1}{c|}{1000} \\ \hline
   
+  Accesorios varios &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{20000} &
+  \multicolumn{1}{c|}{20000} \\ \hline
+  
   Alojamiento \textit{cloud} &
   \multicolumn{1}{c|}{1} &
   \multicolumn{1}{c|}{15000} &
@@ -486,7 +507,7 @@ Descripción &
   \multicolumn{1}{c|}{10000} \\ \hline
   
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{952500} \\ \hline
+  \multicolumn{1}{c|}{972500} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -496,17 +517,17 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
 \multicolumn{1}{|l|}{10\% de los costos directos} &
    \multicolumn{1}{|c|}{1} &
-   \multicolumn{1}{|c|}{95250} & 
-   \multicolumn{1}{|c|}{95250} \\ \hline
+   \multicolumn{1}{|c|}{97250} & 
+   \multicolumn{1}{|c|}{97250} \\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{95250} \\ \hline
+  \multicolumn{1}{c|}{97250} \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} &
-   1047750\\ \hline
+   1069750\\ \hline
 \end{tabularx}%
 \end{table}
 
-Nota: los costos de los componentes de hardware y los servicios \textit{cloud} son aproximados; se tomó un valor aproximado en base a una revisión de posibles módulos y servicios candidatos al momento de la elaboración de la planificación.
+Nota: los costos de los componentes de hardware y los servicios \textit{cloud} son aproximados; se tomó un valor aproximado en base a una revisión de posibles módulos y servicios candidatos al momento de la elaboración de la planificación. Respeto al ítem de accesorios, se refiere a cables, conectores, y otros elementos que se deban adquirir para la implementación del prototipo de hardware.
 
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
