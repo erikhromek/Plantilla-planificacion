@@ -75,6 +75,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 4          & Se aplican correcciones hasta el punto 9 inclusive                & 13/07/2023 \\ \hline
 5          & Se completa hasta el punto 12 inclusive y se corrige fecha de finalización & 22/07/2023 \\ \hline
 6          & Se aplican correcciones hasta el punto 12 inclusive & 29/07/2023 \\ \hline
+7          & Se completa hasta el punto 15 inclusive & 01/08/2023 \\ \hline
 
 %2      & Se completa hasta el punto 7 inclusive
 %		  Se puede agregar algo más \newline
@@ -684,7 +685,7 @@ Se listarán a continuación los requerimientos que, desde el punto de vista del
 \item Req \#1.1: Contar una batería recargable que dure al menos 120 horas (5 días) y sea cargable mediante un cable Micro USB.
 
 \begin{itemize}
-	\item Verificación: Se aproximará el consumo energético del prototipo para saber cuanto debe ser el tamaño de la batería y se buscarán formas de optimizar el consumo energético dentro del desarrollo.
+	\item Verificación: Se calculará el consumo energético aproximado del prototipo para saber cuanto debe ser el tamaño de la batería y se implementarán formas de optimizar el consumo energético dentro del desarrollo.
 	\item Validación: Se dejará funcionando el prototipo durante el mayor tiempo posible y se verificará la carga de batería.
 \end{itemize}
 
@@ -698,22 +699,22 @@ Se listarán a continuación los requerimientos que, desde el punto de vista del
 \item Req \#1.4: Contar con conectividad a la red de telefonía móvil.
 
 \begin{itemize}
-	\item Verificación: Se analizará y revisará el funcionamiento del módulo de gestión de conectividad a la red de telefonía móvil mediante una máquina de estados.
+	\item Verificación: Se analizará el desarrollo y revisará el funcionamiento del módulo de gestión de conectividad a la red de telefonía móvil mediante una máquina de estados.
 	\item Validación: Se verificará que el dispositivo reciba y envíe mensajes y que detecte correctamente el número de teléfono del chip usado.
 \end{itemize}
 
 \item Req \#1.6: Permitir configurar un número de teléfono para enviar una alerta por mensaje de texto.
 
 \begin{itemize}
-	\item Verificación: Se chequeará que el \textit{firmware} del dispositivo guarde el teléfono configurado.
-	\item Validación: Se chequeará que el mensaje de alerta llegue al teléfono indicado y que su información sea correcta.
+	\item Verificación: Se chequeará que el \textit{firmware} del dispositivo guarde el teléfono configurado mediante revisión de código.
+	\item Validación: Se chequeará que el mensaje de alerta llegue al teléfono indicado y que su información sea correcta posterior a una prueba de alerta..
 \end{itemize}
 
 \item Req \#1.8: Incluir la ubicación del dispositivo en el mensaje de alerta.
 
 \begin{itemize}
-	\item Verificación: Se comprobará que el \textit{firmware} del prototipo envíe siempre la última ubicación registrada en el mensaje de alerta.
-	\item Validación: Se chequeará que el mensaje de alerta contenga exactamente la información esperada.
+	\item Verificación: Se comprobará que el \textit{firmware} del prototipo envíe siempre la última ubicación registrada en el mensaje de alerta mediante análisis de código.
+	\item Validación: Se chequeará que el mensaje de alerta contenga exactamente la información esperada luego de una prueba.
 \end{itemize}
 
 \item Req \#1.9: Poder configurar un número de teléfono como administrador del dispositivo.
